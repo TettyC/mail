@@ -4,7 +4,7 @@ import MainTabBar from "components/content/mainTabBar/MainTabBar.vue";
 
 <template>
   <router-view></router-view>
-  <main-tab-bar></main-tab-bar>
+  <MainTabBar></MainTabBar>
 </template>
 
 <style></style>

@@ -12,9 +12,11 @@ const route = useRoute();
 const router = useRouter();
 
 const isActive = computed(() => route.path === props.path);
-
+// const activeColor = computed(() =>
+//   isActive ? { color: props.activeColor } : {}
+// );
 const itemClick = () => {
-  router.replace(props.path);
+  router.push(props.path);
 };
 </script>
 
@@ -26,6 +28,7 @@ const itemClick = () => {
     <div v-show="isActive">
       <slot name="active-img"></slot>
     </div>
+    <!-- TODO:写一篇博文，解释计算属性activeColor -->
     <div :style="isActive ? { color: props.activeColor } : {}">
       <slot name="text"></slot>
     </div>

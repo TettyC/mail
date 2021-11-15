@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 
-import Home from "views/home/Home.vue";
-import Category from "views/home/Home.vue";
-import Cart from "views/home/Home.vue";
-import Profile from "views/home/Home.vue";
+const Home = () => import("views/home/Home.vue");
+const Category = () => import("views/category/Category.vue");
+const Cart = () => import("views/cart/Cart.vue");
+const Profile = () => import("views/profile/Profile.vue");
 
 const routes = [
   { path: "", redirect: "/home" },
@@ -14,7 +14,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(),
   routes,
 });
 
